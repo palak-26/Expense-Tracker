@@ -91,10 +91,11 @@ npm run dev
 ```Desktop View	```
 <img width="1919" height="928" alt="Screenshot 2025-08-14 170205" src="https://github.com/user-attachments/assets/f2145ab1-e479-43a0-9b17-f229b18705bf" />
 <img width="1919" height="907" alt="Screenshot 2025-08-14 170653" src="https://github.com/user-attachments/assets/1ed03e5f-ea85-4f6c-beb9-cc66c46352b0" />
-<img width="1919" height="928" alt="Screenshot 2025-08-14 170552" src="https://github.com/user-attachments/assets/60371505-0429-4127-851c-0f1fc8bcfeac" />
-<img width="1919" height="929" alt="Screenshot 2025-08-14 170617" src="https://github.com/user-attachments/assets/71a64856-918e-402d-b4c5-df4f3adeefaa" />
-<img width="1919" height="925" alt="Screenshot 2025-08-14 170540" src="https://github.com/user-attachments/assets/e08b029c-0ed2-4a94-9b03-b74ece7c5316" />
 <img width="1897" height="903" alt="Screenshot 2025-08-14 170710" src="https://github.com/user-attachments/assets/9e78ca05-4cb4-4d3d-a800-eddd26e087b2" />
+<img width="1919" height="929" alt="Screenshot 2025-08-14 170617" src="https://github.com/user-attachments/assets/71a64856-918e-402d-b4c5-df4f3adeefaa" />
+<img width="1919" height="928" alt="Screenshot 2025-08-14 170552" src="https://github.com/user-attachments/assets/60371505-0429-4127-851c-0f1fc8bcfeac" />
+<img width="1919" height="925" alt="Screenshot 2025-08-14 170540" src="https://github.com/user-attachments/assets/e08b029c-0ed2-4a94-9b03-b74ece7c5316" />
+
 <img width="1919" height="928" alt="Screenshot 2025-08-14 170627" src="https://github.com/user-attachments/assets/5eab8141-89c8-43f2-8be0-59c79acca8ce" />
 <img width="1919" height="928" alt="Screenshot 2025-08-14 170552" src="https://github.com/user-attachments/assets/60371505-0429-4127-851c-0f1fc8bcfeac" />
 
