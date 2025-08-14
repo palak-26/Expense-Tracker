@@ -79,7 +79,15 @@ MONGO_URI=mongodb://localhost:27017/Expense_Tracker
 PORT=5000
 ```
 
-**4️⃣ Run the app concurrently**
+**4️⃣ Set up environment variables**
+
+ ```
+Create a .env file in the frontend/ folder and add:
+
+VITE_API_URL= http://localhost:5000/api
+```
+
+**5️⃣ Run the app concurrently**
 
 ```
 npm run dev
