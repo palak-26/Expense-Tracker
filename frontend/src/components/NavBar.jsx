@@ -1,51 +1,108 @@
-import React, { useState ,useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
-import expenseLogo from "../assets/expenseLogo.png";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
+/**
+ * Responsive Navigation Bar
+ *
+ * Features:
+ * - Navigation links: Home, About, Contact Us
+ * - Scroll-based background change
+ * - Mobile hamburger menu toggle
+ * - Login/Register button
+ * - Fully responsive using Tailwind
+ */
 const NavBar = () => {
-    const list = ["Home", "About", "ContactUs" ];
-    const [isScrolled, setIsScrolled]  = useState()
-    useEffect(() => {
+  const list = ["Home", "About", "ContactUs"];
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Mobile menu state
+  const navigate = useNavigate();
+
+  // Handle scroll background change
+  useEffect(() => {
     const handleScroll = () => {
-      const scrolled = window.scrollY > 10;
-      setIsScrolled(scrolled);
+      setIsScrolled(window.scrollY > 10);
     };
-
-    
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-    const navigate = useNavigate();
+  }, []);
 
-    useEffect(()=>{
-        const path = ({item})=>{
-        let p = `/${item.toLowerCase()}`;
-        navigate(p);
-        
-    }
+  // Navigate to page and close mobile menu
+  const path = (item) => {
+    navigate(`/${item.toLowerCase()}`);
+    setIsMenuOpen(false);
+  };
 
-    },[])
-    
   return (
     <div>
-        <div className={`absolute fixed z-50 top-0 w-full min-w-full h-20 p-5 border-5 border-black flex  items-center justify-center ${isScrolled ? "bg-white/20 shadow-md dark:bg-slate-900 dark:transition-all dark:duration-100 " : "  dark:bg-slate-800/30 dark:backdrop-blur-lg  dark:transition-all dark:duration-100"}`}>
-            
+      {/* Navbar container */}
+      <div
+        className={`fixed z-50 top-0 bg-expense-purpleLight/50 w-full h-20 px-4 sm:px-8 flex items-center justify-center justify-between transition-all duration-300 ${
+          isScrolled
+            ? "bg-white/20 shadow-md dark:bg-slate-900"
+            : "dark:bg-slate-800/30 dark:backdrop-blur-lg"
+        }`}
+      >
+        {/* Desktop Navigation */}
+        <ul className="hidden sm:flex text-center  gap-6 flex items-center justify-center">
+          {list.map((item) => (
+            <li
+              key={item}
+              className="cursor-pointer text-lg font-bold text-black dark:text-white hover:text-[#4d31a3] dark:hover:text-purple-400"
+              onClick={() => path(item)}
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
 
-            <div className='flex justify-evenly w-1/2 justify-center items-center p-4'>
-                <ul  className='flex justify-evenly w-full'>
-                    {list.map((item)=>(
-                    <li key={item} className='cursor-pointer font-bold text-black decoration-0 text-lg hover:text-[#4d31a3]' onClick={()=> path({item}) }>
-                        {item}
-                    </li>
-                    ))}
-                </ul>
+        {/* Login/Register button */}
+        <button
+          className="hidden sm:block font-semibold text-white bg-[#6744ce] px-4 py-2 rounded-md hover:bg-[#5533b0] transition"
+          onClick={() => navigate("/login")}
+        >
+          Login / Register
+        </button>
 
-                <button className='font-semibold text-white bg-[#6744ce] p-2 rounded-md' onClick={()=> navigate("/login")}>Login/Register</button>
-            </div>
+        {/* Mobile Hamburger Menu Button */}
+        <button
+          className="sm:hidden flex flex-col gap-1 focus:outline-none"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <span className="block w-6 h-0.5 bg-black dark:bg-white"></span>
+          <span className="block w-6 h-0.5 bg-black dark:bg-white"></span>
+          <span className="block w-6 h-0.5 bg-black dark:bg-white"></span>
+        </button>
+      </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isMenuOpen && (
+        <div className="sm:hidden fixed top-20 left-0 w-full bg-white dark:bg-slate-900 shadow-lg z-40">
+          <ul className="flex flex-col items-center gap-4 py-4">
+            {list.map((item) => (
+              <li
+                key={item}
+                className="cursor-pointer font-bold text-black dark:text-white hover:text-[#4d31a3] dark:hover:text-purple-400"
+                onClick={() => path(item)}
+              >
+                {item}
+              </li>
+            ))}
+            <li>
+              <button
+                className="font-semibold text-white bg-[#6744ce] px-4 py-2 rounded-md hover:bg-[#5533b0] transition"
+                onClick={() => {
+                  navigate("/login");
+                  setIsMenuOpen(false);
+                }}
+              >
+                Login / Register
+              </button>
+            </li>
+          </ul>
         </div>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

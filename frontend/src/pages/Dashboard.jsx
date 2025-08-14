@@ -1,4 +1,5 @@
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import ExpenseForm from "../components/ExpenseForm";
 import ExpenseList from "../components/ExpenseList";
 import ExpenseSummary from "../components/ExpenseSummary";
@@ -6,13 +7,19 @@ import ChartComponent from "../components/ChartComponent";
 import { getExpenses } from "../services/expenseServices";
 import { useAuth } from "../context/AuthContext";
 
+/**
+ * Animated Dashboard Component
+ * ----------------------------
+ * - Fetches and displays expense data
+ * - Animated entry for sections
+ * - Responsive layout for mobile & desktop
+ */
 export default function Dashboard() {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
   const [expenses, setExpenses] = useState([]);
   const [loading, setLoading] = useState(true);
-  const {logout} = useAuth();
 
-
+  // Fetch latest expenses from API
   const refresh = async () => {
     try {
       setLoading(true);
@@ -30,30 +37,86 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className="max-w-6xl mx-auto p-4 space-y-4">
-      <div className="flex items-center justify-between">
-        <h1 className="text-5xl font-bold">Dashboard</h1>
-        <div className="flex flex-col items-center">
-          <p className="text-sm text-gray-600">Logged in as <span className="font-bold">{user?.email}</span></p>
-          <p onClick={logout} className="font-bold text-sm text-gray-600"><span onClick={logout} className="cursor-pointer">LogOut</span></p>
+    <motion.div
+      className="max-w-6xl mx-auto p-4 space-y-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+    >
+      {/* Dashboard Header */}
+      <motion.div
+        className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h1 className="text-4xl sm:text-5xl font-bold">Dashboard</h1>
+
+        {/* User info */}
+        <div className="flex flex-col items-center sm:items-end">
+          <p className="text-sm text-gray-600">
+            Logged in as <span className="font-bold">{user?.email}</span>
+          </p>
+          <p
+            onClick={logout}
+            className="font-bold text-sm text-red-500 cursor-pointer hover:underline"
+          >
+            Log Out
+          </p>
         </div>
-      </div>
+      </motion.div>
 
-      <h1 className="font-bold text-2xl">👋🏻 Hiiiii {user?.name}!!! </h1>
+      {/* Greeting */}
+      <motion.h2
+        className="font-bold text-xl sm:text-2xl"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+      >
+        👋🏻 Hiiiii {user?.name}!!!
+      </motion.h2>
 
-      <ExpenseForm onAdded={refresh} />
+      {/* Expense Form */}
+      <motion.div
+        initial={{ scale: 0.95, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.3 }}
+      >
+        <ExpenseForm onAdded={refresh} />
+      </motion.div>
 
+      {/* Loading or Data */}
       {loading ? (
-        <div className="p-4 bg-white rounded-2xl shadow">Loading...</div>
+        <motion.div
+          className="p-4 bg-white rounded-2xl shadow"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          Loading...
+        </motion.div>
       ) : (
         <>
-          <div className="grid md:grid-cols-2 gap-4">
+          {/* Expense List + Summary */}
+          <motion.div
+            className="grid md:grid-cols-2 gap-4"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
             <ExpenseList expenses={expenses} />
             <ExpenseSummary expenses={expenses} />
-          </div>
-          <ChartComponent expenses={expenses} />
+          </motion.div>
+
+          {/* Charts */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+          >
+            <ChartComponent expenses={expenses} />
+          </motion.div>
         </>
       )}
-    </div>
+    </motion.div>
   );
 }
