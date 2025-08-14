@@ -4,7 +4,7 @@
 [![Made with React](https://img.shields.io/badge/Frontend-React.js-blue?logo=react)](https://react.dev/)
 [![Made with Node.js](https://img.shields.io/badge/Backend-Node.js-green?logo=node.js)](https://nodejs.org/)
 [![Database MongoDB](https://img.shields.io/badge/Database-MongoDB-green?logo=mongodb)](https://www.mongodb.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 
 An intuitive and responsive web application to manage and track your daily expenses efficiently.  
 Built with **React.js**, **Node.js**, **Express**, and **MongoDB**, this project allows users to add, view, and delete expenses with real-time updates.
@@ -18,12 +18,13 @@ Built with **React.js**, **Node.js**, **Express**, and **MongoDB**, this project
 - 🗑 **Delete Functionality** — Remove expenses you no longer want to track.
 - 📱 **Responsive Design** — Works seamlessly on desktop and mobile devices.
 - ⚡ **Real-time Updates** — Changes reflect instantly without page reloads.
+- 📊 **Charts Analysis** - Expense analysis through colourfull charts.
 
 ---
 
 ## 🛠 Tech Stack
 
-**Frontend:** React.js, CSS  
+**Frontend:** React.js, Tailwind CSS  
 **Backend:** Node.js, Express.js  
 **Database:** MongoDB  
 **Tools:** npm, Concurrently
@@ -32,6 +33,7 @@ Built with **React.js**, **Node.js**, **Express**, and **MongoDB**, this project
 
 ## 📂 Project Structure
 
+```
 Expense-Tracker/
 │
 ├── backend/ # Node.js + Express API
@@ -45,8 +47,7 @@ Expense-Tracker/
 │ ├── index.js
 │
 └── package.json # Root for concurrent running
-
-
+```
 ---
 
 ## ⚙️ Installation & Setup
