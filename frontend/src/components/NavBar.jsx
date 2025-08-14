@@ -36,10 +36,10 @@ const NavBar = () => {
     <div>
       {/* Navbar container */}
       <div
-        className={`fixed z-50 top-0 bg-expense-purpleLight/50 w-full h-20 px-4 sm:px-8 flex items-center justify-center justify-between transition-all duration-300 ${
+        className={`fixed z-50 top-0  w-full h-20 px-4 sm:px-8 flex items-center justify-center justify-between transition-all duration-300 ${
           isScrolled
-            ? "bg-white/20 shadow-md dark:bg-slate-900"
-            : "dark:bg-slate-800/30 dark:backdrop-blur-lg"
+            ? "bg-expense-purpleLight/50 shadow-md "
+            : "bg-expense-purpleLight/80"
         }`}
       >
         {/* Desktop Navigation */}
