@@ -75,7 +75,7 @@ npm install
  ```
 Create a .env file in the backend/ folder and add:
 
-MONGO_URI=mongodb://localhost:27017/Expense_Tracker
+MONGO_URI=mongodb+srv://palakneekhra1234:XZ11h56IOGLm6thX@cluster0.bxpzhal.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 PORT=5000
 ```
 
