@@ -28,7 +28,7 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-[calc(100vh-56px)] grid place-items-center p-4">
+    <div className="min-h-[calc(100vh-56px)] grid place-items-center p-4 bg-expense-lightPink">
       <form onSubmit={submit} className="w-full max-w-sm bg-white p-6 rounded-2xl shadow space-y-3">
         <h1 className="text-xl font-bold text-center">Create account</h1>
         <input
