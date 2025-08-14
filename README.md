@@ -75,7 +75,7 @@ npm install
  ```
 Create a .env file in the backend/ folder and add:
 
-MONGO_URI=your_mongodb_connection_string
+MONGO_URI=mongodb://localhost:27017/Expense_Tracker
 PORT=5000
 ```
 
