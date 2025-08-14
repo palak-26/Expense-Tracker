@@ -22,8 +22,8 @@ const app = express(); // Initialize Express app
 
 // Enable CORS to allow frontend requests
 app.use(cors({
-  origin: process.env.CLIENT_URL || "http://localhost:5173/" , // Only allow this frontend URL  
-  credentials: true, // Allow cookies & authentication headers
+  origin: process.env.CLIENT_URL  , // Only allow this frontend URL  
+  credentials: include, // Allow cookies & authentication headers
 }));
 
 // Parse incoming JSON payloads
