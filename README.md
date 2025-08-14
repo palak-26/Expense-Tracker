@@ -89,13 +89,17 @@ npm run dev
 **📸 Screenshots**
 
 ```Desktop View	```
-<img width="1919" height="928" alt="Screenshot 2025-08-14 170552" src="https://github.com/user-attachments/assets/60371505-0429-4127-851c-0f1fc8bcfeac" />
-<img width="1919" height="925" alt="Screenshot 2025-08-14 170540" src="https://github.com/user-attachments/assets/e08b029c-0ed2-4a94-9b03-b74ece7c5316" />
+<img width="1919" height="928" alt="Screenshot 2025-08-14 170205" src="https://github.com/user-attachments/assets/f2145ab1-e479-43a0-9b17-f229b18705bf" />
+<img width="1919" height="907" alt="Screenshot 2025-08-14 170653" src="https://github.com/user-attachments/assets/1ed03e5f-ea85-4f6c-beb9-cc66c46352b0" />
+<img width="1897" height="903" alt="Screenshot 2025-08-14 170710" src="https://github.com/user-attachments/assets/9e78ca05-4cb4-4d3d-a800-eddd26e087b2" />
 <img width="1919" height="928" alt="Screenshot 2025-08-14 170552" src="https://github.com/user-attachments/assets/60371505-0429-4127-851c-0f1fc8bcfeac" />
 <img width="1919" height="929" alt="Screenshot 2025-08-14 170617" src="https://github.com/user-attachments/assets/71a64856-918e-402d-b4c5-df4f3adeefaa" />
 <img width="1919" height="928" alt="Screenshot 2025-08-14 170627" src="https://github.com/user-attachments/assets/5eab8141-89c8-43f2-8be0-59c79acca8ce" />
-<img width="1919" height="907" alt="Screenshot 2025-08-14 170653" src="https://github.com/user-attachments/assets/1ed03e5f-ea85-4f6c-beb9-cc66c46352b0" />
-<img width="1897" height="903" alt="Screenshot 2025-08-14 170710" src="https://github.com/user-attachments/assets/9e78ca05-4cb4-4d3d-a800-eddd26e087b2" />
+<img width="1919" height="928" alt="Screenshot 2025-08-14 170552" src="https://github.com/user-attachments/assets/60371505-0429-4127-851c-0f1fc8bcfeac" />
+<img width="1919" height="925" alt="Screenshot 2025-08-14 170540" src="https://github.com/user-attachments/assets/e08b029c-0ed2-4a94-9b03-b74ece7c5316" />
+
+
+
 
 
 
@@ -106,21 +110,28 @@ npm run dev
 <img width="397" height="809" alt="Screenshot 2025-08-14 171056" src="https://github.com/user-attachments/assets/54e81020-4e6b-4be5-9adc-5c45f06a60ed" />
 <img width="397" height="805" alt="Screenshot 2025-08-14 171117" src="https://github.com/user-attachments/assets/5c76ab89-dde5-45d5-9785-5b8ed743f75c" />
 <img width="394" height="802" alt="Screenshot 2025-08-14 171105" src="https://github.com/user-attachments/assets/620738c7-4753-4383-ac80-40de4db78092" />
-<img width="397" height="805" alt="Screenshot 2025-08-14 171317" src="https://github.com/user-attachments/assets/0f099fee-9732-4ddb-9f18-6dc5bec30259" />
-<img width="396" height="804" alt="Screenshot 2025-08-14 171259" src="https://github.com/user-attachments/assets/6cdc48b1-6c1c-4225-9a4e-16a3b0ba9345" />
-<img width="398" height="802" alt="Screenshot 2025-08-14 171210" src="https://github.com/user-attachments/assets/37cdbd66-66c9-4f86-946c-c80f31521818" />
 <img width="398" height="804" alt="Screenshot 2025-08-14 171150" src="https://github.com/user-attachments/assets/9c5c1b3c-948b-42cf-be9d-edc2a513bf57" />
+<img width="398" height="802" alt="Screenshot 2025-08-14 171210" src="https://github.com/user-attachments/assets/37cdbd66-66c9-4f86-946c-c80f31521818" />
+<img width="396" height="804" alt="Screenshot 2025-08-14 171259" src="https://github.com/user-attachments/assets/6cdc48b1-6c1c-4225-9a4e-16a3b0ba9345" />
+<img width="397" height="805" alt="Screenshot 2025-08-14 171317" src="https://github.com/user-attachments/assets/0f099fee-9732-4ddb-9f18-6dc5bec30259" />
 <img width="398" height="805" alt="Screenshot 2025-08-14 171352" src="https://github.com/user-attachments/assets/0590a5b7-81d2-4446-ba6e-f6c55a1cd1c0" />
 <img width="399" height="803" alt="Screenshot 2025-08-14 171330" src="https://github.com/user-attachments/assets/d3a6eacf-18ef-4e6e-807a-a0d3a5fcb29d" />
 
-**📌 Future Enhancements**
 
+
+**📌 Future Enhancements**
+```
 🔐 User authentication through google and github (login/signup)
 
 💾 Export/ Download expense data (in .pdf format)
+```
+
+
 
 **👨‍💻 Developed by:**
 
 **Palak Neekhra**
+```
 📧 Email: palakneekhra1234@gmail.com
 🌐 GitHub: palak-26
+```
