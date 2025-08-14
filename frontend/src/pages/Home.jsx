@@ -18,7 +18,7 @@ const Home = () => {
       <div className="relative flex flex-col mt-20 lg:flex-row items-center justify-evenly p-8 lg:p-10 mt-10 lg:mt-20 z-20">
         
         {/* Left text content */}
-        <div className="flex flex-col justify-center items-center lg:items-start  lg:text-left gap-6 max-w-lg">
+        <div className="flex flex-col justify-center items-center lg:items-start  lg:text-left gap-4 max-w-lg">
           <img src={expenseLogo} alt="Expense Logo" className="h-16 w-16 md:h-20 md:w-20" />
           <h1 className="text-4xl lg:text-7xl font-bold text-center md:text-start leading-tight">Expense Tracker</h1>
           <p className="text-lg md:text-3xl font-semibold text-center md:text-start text-violet-950">
