@@ -13,8 +13,7 @@ export const registerUser = async (payload) => {
  */
 export const loginUser = async (payload) => {
   const { data } = await API.post("/auth/login", payload);
-  // { token, user: { id, name, email } }
-  const { token, user } = await loginUser({ email, password });
+  const { token } = data; // destructure from response
   localStorage.setItem("token", token);
   return data;
 };

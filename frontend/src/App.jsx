@@ -1,10 +1,11 @@
 import { Route, Routes, Navigate } from "react-router-dom";
-import Navbar from "./components/NavBar";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/LogIn";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
 import { PrivateRoute, useAuth } from "./context/AuthContext";
+import About from "./pages/About";
+import ContactUs from "./pages/ContactUs";
 
 function AppRoutes() {
   const auth = useAuth();
@@ -37,6 +38,12 @@ function AppRoutes() {
 
       {/* Catch-all */}
       <Route path="*" element={<Navigate to="/" replace />} />
+
+      <Route path='/about' element={<About/>}/>
+        
+      <Route path='/contactus' element={<ContactUs/>}/>
+      
+
     </Routes>
   );
 }
@@ -44,7 +51,6 @@ function AppRoutes() {
 export default function App() {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <Navbar />
       <AppRoutes />
     </div>
   );

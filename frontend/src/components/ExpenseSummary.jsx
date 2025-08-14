@@ -6,7 +6,7 @@ export default function ExpenseSummary({ expenses = [] }) {
   const overall = Object.values(totals).reduce((a, b) => a + b, 0);
 
   return (
-    <div className="p-4 bg-white rounded-2xl shadow">
+    <div className="p-4 bg-expense-purpleLight/60 rounded-2xl shadow">
       <h2 className="text-lg font-bold mb-3">Summary</h2>
       {Object.keys(totals).length === 0 ? (
         <p className="text-sm text-gray-600">No data to summarize.</p>

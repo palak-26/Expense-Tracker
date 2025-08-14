@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { formatDate } from "../utils/formatDate";
+import { deleteExpense, updateExpense } from "../services/expenseServices";
 
 export default function ExpenseList({ expenses = [] }) {
   const [category, setCategory] = useState("All");
@@ -20,12 +21,13 @@ export default function ExpenseList({ expenses = [] }) {
       return okCat && okFrom && okTo;
     });
   }, [expenses, category, fromDate, toDate]);
+  
 
   return (
-    <div className="p-4 bg-white rounded-2xl shadow">
+    <div className="p-4 bg-expense-purpleLight/60 rounded-2xl shadow">
       <div className="flex flex-wrap items-end gap-3 mb-3">
         <div className="flex-1 min-w-[160px]">
-          <label className="block text-sm mb-1">Category</label>
+          <label className="block text-sm mb-1 font-semibold">Category</label>
           <select
             className="p-2 border rounded w-full"
             value={category}
@@ -37,7 +39,7 @@ export default function ExpenseList({ expenses = [] }) {
           </select>
         </div>
         <div>
-          <label className="block text-sm mb-1">From</label>
+          <label className="block text-sm mb-1 font-semibold">From</label>
           <input
             type="date"
             className="p-2 border rounded"
@@ -46,7 +48,7 @@ export default function ExpenseList({ expenses = [] }) {
           />
         </div>
         <div>
-          <label className="block text-sm mb-1">To</label>
+          <label className="block text-sm mb-1 font-semibold">To</label>
           <input
             type="date"
             className="p-2 border rounded"
@@ -65,7 +67,22 @@ export default function ExpenseList({ expenses = [] }) {
               <span className="font-medium">{expense.category}</span>
               <span className="tabular-nums">₹{Number(expense.amount).toLocaleString()}</span>
               <span className="text-gray-600">{formatDate(expense.date)}</span>
+              <button className="bg-violet-950 font-semibold text-white rounded p-2 hover:opacity-90 disabled:opacity-50" onClick={ async ()=>{
+                const newAmount = prompt("Enter new amount:", expense.amount);
+                const newCatergory =  prompt("Enter new category:", expense.category)
+                if (newAmount || newCatergory) {
+                await updateExpense(expense._id, { ...expense, amount: newAmount , category: newCatergory });
+                window.location.reload();
+                }
+                
+              } } >Edit</button>
+              <button className="bg-violet-950 font-semibold text-white rounded p-2 hover:opacity-90 disabled:opacity-50" onClick={async ()=>{
+                await deleteExpense(expense._id);
+                window.location.reload();
+              }}>Delete</button>
             </li>
+
+            
           ))}
         </ul>
       )}

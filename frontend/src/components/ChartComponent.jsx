@@ -26,11 +26,19 @@ export default function ChartComponent({ expenses = [] }) {
     }));
   }, [expenses]);
 
+  const COLORS = [
+   "#210F37",
+    "#065084",
+    "#0F828C",
+    "#78B9B5",
+    "#4F1C51" 
+];
+
   const [view, setView] = useState("bar"); // 'bar' or 'pie'
 
   if (!data.length) {
     return (
-      <div className="p-4 bg-white rounded-2xl shadow">
+      <div className="p-4  rounded-2xl shadow">
         <h2 className="text-lg font-bold mb-3">Spending Chart</h2>
         <p>No data to visualize yet.</p>
       </div>
@@ -38,19 +46,19 @@ export default function ChartComponent({ expenses = [] }) {
   }
 
   return (
-    <div className="p-4 bg-white rounded-2xl shadow">
-      <div className="flex items-center justify-between mb-3">
+    <div className="p-4 bg-expense-purpleLight/60 rounded-2xl shadow  ">
+      <div className="flex items-center justify-between mb-3 ">
         <h2 className="text-lg font-bold">Spending Chart</h2>
         <div className="flex gap-2">
           <button
             onClick={() => setView("bar")}
-            className={`px-3 py-1 rounded border ${view === "bar" ? "bg-gray-900 text-white" : "bg-white"}`}
+            className={`px-3 py-1 rounded border ${view === "bar" ? "bg-violet-950 font-semibold text-white" : "bg-white"}`}
           >
             Bar
           </button>
           <button
             onClick={() => setView("pie")}
-            className={`px-3 py-1 rounded border ${view === "pie" ? "bg-gray-900 text-white" : "bg-white"}`}
+            className={`px-3 py-1 rounded border ${view === "pie" ? "bg-violet-950 font-semibold text-white" : "bg-white"}`}
           >
             Pie
           </button>
@@ -66,7 +74,11 @@ export default function ChartComponent({ expenses = [] }) {
               <YAxis />
               <Tooltip />
               <Legend />
-              <Bar dataKey="total" name="Total Spend" />
+              <Bar dataKey="total" name="Total Spend">
+                {data.map((_, idx) => (
+                <Cell key={`bar-${idx}`} fill={COLORS[idx % COLORS.length]} />
+                ))}
+              </Bar>
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -77,7 +89,9 @@ export default function ChartComponent({ expenses = [] }) {
               <Tooltip />
               <Legend />
               <Pie data={data} dataKey="total" nameKey="category" cx="50%" cy="50%" outerRadius={110} label>
-                {data.map((_, idx) => <Cell key={idx} />)}
+                {data.map((_, idx) => (
+                <Cell key={`pie-${idx}`} fill={COLORS[idx % COLORS.length]} />
+                ))}
               </Pie>
             </PieChart>
           </ResponsiveContainer>

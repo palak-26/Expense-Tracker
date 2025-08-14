@@ -3,7 +3,9 @@ import girl from '../assets/girl.png';
 import expenseLogo from '../assets/expenseLogo.png';
 import spending from '../assets/spending.png';
 import NavBar from '../components/NavBar';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Route, Routes, useNavigate } from 'react-router-dom';
+import About from './About';
+import ContactUs from './ContactUs';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -27,7 +29,7 @@ const Home = () => {
 
         {/* Middle card */}
         <div className="w-1/3">
-          <div className="absolute rounded-2xl h-[55%] bg-white shadow-sm p-5 w-[20%] top-[30%] z-20 space-y-4">
+          <div className="absolute rounded-2xl h-[60%] bg-white shadow-sm p-5 w-[20%] top-[22%] z-20 space-y-4">
             <div className="flex gap-x-4 items-center">
               <div className="h-24 w-24 rounded-full bg-expense-greenAlt flex items-center justify-center">
                 <img src={spending} alt="" className="h-14 w-14" />
@@ -73,7 +75,7 @@ const Home = () => {
         </div>
 
         {/* Right side image */}
-        <img src={girl} alt="" className="absolute h-[55%] right-48 bottom-0 z-40" />
+        <img src={girl} alt="" className="absolute h-[70%] right-48 bottom-0 z-40" />
       </div>
 
       {/* Background Waves */}
@@ -112,7 +114,11 @@ const Home = () => {
           fill="url(#darkWaveGradient)"
         />
       </svg>
+
+      
     </div>
+
+    
   );
 };
 
