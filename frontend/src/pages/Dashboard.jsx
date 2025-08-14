@@ -13,7 +13,7 @@ import { useAuth } from "../context/AuthContext";
  * - Fetches and displays expense data
  * - Animated entry for sections
  * - Responsive layout for mobile & desktop
- */
+ **/
 export default function Dashboard() {
   const { user, logout } = useAuth();
   const [expenses, setExpenses] = useState([]);
