@@ -5,7 +5,6 @@ import welcome from '../assets/onboarding.png';
 import vision from '../assets/vision.png';
 import why from '../assets/problem.png';
 import features from '../assets/key-features.png';
-import '../change.css';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 

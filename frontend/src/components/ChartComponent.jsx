@@ -49,7 +49,8 @@ export default function ChartComponent({ expenses = [] }) {
     "#065084",
     "#0F828C",
     "#78B9B5",
-    "#4F1C51"
+    "#4F1C51",
+    "#064232"
   ];
 
   // State for toggling between Bar and Pie views

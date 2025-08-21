@@ -2,7 +2,7 @@ import { useState } from "react";
 import { addExpense } from "../services/expenseServices";
 
 // Default categories for expenses
-const DEFAULT_CATEGORIES = ["Food", "Travel", "Shopping", "Bills", "Entertainment", "Other"];
+const DEFAULT_CATEGORIES = ["Food", "Travel", "Shopping", "Bills", "Entertainment", "Groceries", "Other"];
 
 /**
  * ExpenseForm Component

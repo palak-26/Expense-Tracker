@@ -1,7 +1,7 @@
 const express = require('express'); // Express framework
 const dotenv = require('dotenv'); // To load environment variables from .env
 const cors = require('cors'); // For handling Cross-Origin Resource Sharing
-const connectDB = require('./config'); // MongoDB connection function
+const connectDB = require('./config')// MongoDB connection function
 const authenticateUser = require('./middleware/authMiddleware'); // Middleware to protect routes
 
 // =====================
@@ -26,7 +26,7 @@ app.use(cors({
   credentials: true, // Allow cookies & authentication headers
 }));
 
-// Parse incoming JSON payloads
+// Parse incoming JSON data 
 app.use(express.json());
 
 // =====================

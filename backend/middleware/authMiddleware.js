@@ -23,7 +23,7 @@ const authenticateUser = async (req, res, next) => {
         // Fetch user from DB (excluding password field)
         req.user = await User.findById(decoded.id).select("-password");
 
-        // Continue to next middleware or route handler
+        // Continues to route handler
         next();
     }
     catch (error) {

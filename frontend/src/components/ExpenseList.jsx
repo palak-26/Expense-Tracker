@@ -92,6 +92,8 @@ export default function ExpenseList({ expenses = [] }) {
               key={expense._id}
               className="py-2 flex flex-wrap items-center justify-between gap-2"
             >
+              {/* {Expense Title} */}
+              <span className="font-medium break-words">{expense.title}</span>
               {/* Expense Category */}
               <span className="font-medium break-words">{expense.category}</span>
 
@@ -105,7 +107,7 @@ export default function ExpenseList({ expenses = [] }) {
 
               {/* Edit Button */}
               <button
-                className="bg-violet-950 font-semibold text-white rounded p-2 hover:opacity-90 disabled:opacity-50"
+                className="bg-violet-950 font-semibold text-white rounded p-2 hover:opacity-90 "
                 onClick={async () => {
                   const newAmount = prompt(
                     "Enter new amount:",
@@ -131,7 +133,7 @@ export default function ExpenseList({ expenses = [] }) {
 
               {/* Delete Button */}
               <button
-                className="bg-red-600 font-semibold text-white rounded p-2 hover:opacity-90 disabled:opacity-50"
+                className="bg-red-600 font-semibold text-white rounded p-2 hover:opacity-90 "
                 onClick={async () => {
                   await deleteExpense(expense._id);
                   window.location.reload();

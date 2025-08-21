@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken'); // For generating JWT tokens
 // =====================
 const registerUser = async (req, res) => {
     const { name, email, password } = req.body; // Extract data from request body
-    // console.log(name); // Debug (optional)
+    // console.log(name); 
     
     try {
         // Check if user already exists by email
@@ -26,7 +26,7 @@ const registerUser = async (req, res) => {
         // Generate JWT token with user ID
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1d" });
 
-        // Send success response with token and user details
+        // Sends success response with token and user details
         res.status(200).json({
             message: "User registered successfully!",
             token,
@@ -43,7 +43,7 @@ const registerUser = async (req, res) => {
 // =====================
 const loginUser = async (req, res) => {
     const { email, password } = req.body; // Extract email & password
-    console.log("Request body received:", req.body); // Debug log
+    // console.log("Request body received:", req.body); 
 
     try {
         // Check if user exists

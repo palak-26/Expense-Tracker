@@ -57,7 +57,7 @@ export default function ExpenseSummary({ expenses = [] }) {
           <li className="flex justify-between border-t pt-2 mt-2 text-base sm:text-lg">
             <span className="font-semibold">Total</span>
             <span className="tabular-nums font-semibold">
-              ₹{overall.toLocaleString()}
+              ₹{overall}
             </span>
           </li>
         </ul>

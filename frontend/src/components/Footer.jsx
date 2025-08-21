@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="flex space-x-4 mt-2 md:mt-0">
           <a href="/about" className="hover:text-white transition">About</a>
           <a href="/privacy" className="hover:text-white transition">Privacy</a>
-          <a href="/contact" className="hover:text-white transition">Contact</a>
+          <a href="/contactus" className="hover:text-white transition">Contact</a>
         </div>
       </div>
     </footer>

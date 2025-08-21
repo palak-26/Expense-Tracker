@@ -5,7 +5,7 @@ const mongoose = require('mongoose'); // MongoDB ODM
 // =====================
 // This schema defines the structure of a user document in MongoDB.
 const userSchema = new mongoose.Schema({
-    // User's full name (required)
+    // User name (required)
     name: { 
         type: String, 
         required: true 
@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
         unique: true // Ensures no two users can have the same email
     },
 
-    // Hashed password (required)
+    // Password (required)
     password: { 
         type: String, 
         required: true 

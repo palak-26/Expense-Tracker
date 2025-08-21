@@ -8,7 +8,7 @@ const addExpense = async (req,res)=>{
     const {title , amount , category , date} = req.body;
 
     try {
-        // Create a new Expense document linked to the logged-in user
+        // Create a new Expense linked to the logged-in user
         const expense = new Expense({
             user: req.user._id, // Taken from auth middleware after token verification
             title,

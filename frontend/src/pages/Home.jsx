@@ -25,7 +25,7 @@ const Home = () => {
             Easily monitor your spending and manage your finances
           </p>
           <button
-            onClick={() => navigate("/login")}
+            onClick={() => navigate("/auth/login")}
             className="bg-violet-950 text-white font-semibold py-3 px-8 rounded-md text-lg md:text-xl shadow-md hover:scale-105 transition-transform"
           >
             Get Started
@@ -33,12 +33,12 @@ const Home = () => {
         </div>
 
         {/* floating card */}
-        <div className="relative flex items-center justify-center mt-10 lg:mt-0 lg:-ml-20 md:w-1/3">
+        <div className="relative flex items-center justify-center mt-10 lg:mt-0 lg:-ml-20 lg:w-1/3">
           <div className="bg-white lg:right-10 relative rounded-2xl shadow-lg p-6 z-20 lg:w-2/3 lg:mt-20 w-full max-w-sm scale-100 hover:scale-105 transition-transform">
             {/* Balance section */}
             <div className="flex gap-6 items-center">
               <div className="h-20 w-20 rounded-full bg-expense-greenAlt flex items-center justify-center">
-                <img src={spending} alt="" className="h-12 w-12" />
+                <img src={spending} alt="" className="h-12 w-12 " />
               </div>
               <div>
                 <span className="text-3xl text-end font-bold">...</span>

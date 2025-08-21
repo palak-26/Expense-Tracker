@@ -22,4 +22,4 @@ router.delete('/:id', deleteExpense);
 // @desc    Update an expense by ID
 router.put('/:id', updateExpense); 
 
-module.exports = router; // Export router for use in server.js
+module.exports = router; // Export router
