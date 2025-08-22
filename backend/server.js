@@ -33,6 +33,10 @@ app.use(express.json());
 // ROUTES
 // =====================
 
+app.get("/", (res,req)=>{
+  res.send("Backend is Live!");
+});
+
 // Authentication routes (e.g., /api/auth/login, /api/auth/register)
 app.use("/api/auth", require('./routes/authRoutes'));
 

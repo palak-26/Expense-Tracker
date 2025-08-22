@@ -10,6 +10,7 @@ const router = express.Router(); // Create a new router instance
 // @route   POST /login
 // @desc    Authenticate user & return token
 
+
 router.post('/login', loginUser);
 
 // @route   POST /register
