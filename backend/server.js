@@ -33,7 +33,7 @@ app.use(express.json());
 // ROUTES
 // =====================
 
-app.get("/", (res,req)=>{
+app.get("/", (req,res)=>{
   res.send("Backend is Live!");
 });
 
