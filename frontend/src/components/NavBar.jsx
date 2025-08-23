@@ -47,7 +47,7 @@ const NavBar = () => {
           {list.map((item) => (
             <li
               key={item}
-              className="cursor-pointer text-lg font-bold text-black hover:text-[#4d31a3] dark:hover:text-purple-400"
+              className="cursor-pointer text-lg font-bold text-black hover:text-[#4d31a3]"
               onClick={() => path(item)}
             >
               {item}

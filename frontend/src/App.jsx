@@ -6,13 +6,15 @@ import Home from "./pages/Home";
 import { PrivateRoute, useAuth } from "./context/AuthContext";
 import About from "./pages/About";
 import ContactUs from "./pages/ContactUs";
+import { FormspreeProvider } from "@formspree/react";
 
 function AppRoutes() {
   const auth = useAuth();
   const token = auth?.token; // ✅ Safe access
 
   return (
-    <Routes>
+    <FormspreeProvider>
+      <Routes>
       {/* Landing page */}
       <Route path="/" element={<Home />} />
 
@@ -45,6 +47,7 @@ function AppRoutes() {
       
 
     </Routes>
+    </FormspreeProvider>
   );
 }
 
