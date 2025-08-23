@@ -22,7 +22,7 @@ const ContactUs = () => {
         {/* Contact Form Section */}
         <div>
           <h2 className="text-3xl font-bold mb-6 text-purple-900">Contact Us</h2>
-          <form className="space-y-4">
+          <form className="space-y-4" action="https://formspree.io/f/mjkonjdy" method="POST">
             {/* Name Input */}
             <div>
               <label className="block text-sm font-medium mb-1">Name</label>
