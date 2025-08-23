@@ -21,5 +21,8 @@
   "homepage": "https://github.com/palak-26/Expense-Tracker#readme",
   "devDependencies": {
     "concurrently": "^9.2.0"
+  },
+  "dependencies": {
+    "@formspree/react": "^3.0.0"
   }
 }
