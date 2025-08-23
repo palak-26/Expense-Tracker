@@ -11,6 +11,7 @@
     "start": "vite"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "axios": "^1.11.0",
     "framer-motion": "^12.23.12",
     "react": "^19.1.1",

@@ -13,14 +13,14 @@ function AppRoutes() {
   const token = auth?.token; // ✅ Safe access
 
   return (
-    <FormspreeProvider project="mjkonjdy">
+    // <FormspreeProvider project="mjkonjdy">
       <Routes>
       {/* Landing page */}
       <Route path="/" element={<Home />} />
 
       {/* Dashboard - protected route */}
       <Route
-        path="/dashboard"
+        path="/user/dashboard"
         element={
             <PrivateRoute>
               <Dashboard />
@@ -31,11 +31,11 @@ function AppRoutes() {
       {/* Auth routes */}
       <Route
         path="/auth/login"
-        element={token ? <Navigate to="/dashboard" replace /> : <Login />}
+        element={token ? <Navigate to="/user/dashboard" replace /> : <Login />}
       />
       <Route
         path="/auth/register"
-        element={token ? <Navigate to="/dashboard" replace /> : <Register />}
+        element={token ? <Navigate to="/user/dashboard" replace /> : <Register />}
       />
 
       {/* Catch-all */}
@@ -47,7 +47,7 @@ function AppRoutes() {
       
 
     </Routes>
-    </FormspreeProvider>
+    // </FormspreeProvider>
   );
 }
 
