@@ -25,7 +25,7 @@ const Home = () => {
             Easily monitor your spending and manage your finances
           </p>
           <button
-            onClick={() => navigate("/api/auth/login")}
+            onClick={() => navigate("/auth/login")}
             className="bg-violet-950 text-white font-semibold py-3 px-8 rounded-md text-lg md:text-xl shadow-md hover:scale-105 transition-transform"
           >
             Get Started

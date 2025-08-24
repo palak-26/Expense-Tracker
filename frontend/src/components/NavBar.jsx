@@ -58,7 +58,7 @@ const NavBar = () => {
         {/* Login/Register button */}
         <button
           className="hidden sm:block font-semibold text-white bg-[#6744ce] px-4 py-2 rounded-md hover:bg-[#5533b0] transition"
-          onClick={() => navigate("/api/auth/login")}
+          onClick={() => navigate("/auth/login")}
         >
           Login / Register
         </button>

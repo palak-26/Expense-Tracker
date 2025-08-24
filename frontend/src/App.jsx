@@ -30,11 +30,11 @@ function AppRoutes() {
 
       {/* Auth routes */}
       <Route
-        path="/api/auth/login"
+        path="/auth/login"
         element={token ? <Navigate to="/user/dashboard" replace /> : <Login />}
       />
       <Route
-        path="/api/auth/register"
+        path="/auth/register"
         element={token ? <Navigate to="/user/dashboard" replace /> : <Register />}
       />
 
