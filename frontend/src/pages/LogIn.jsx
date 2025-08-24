@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { loginUser, resetPasswordAPI } from "../services/authServices";
+import { loginUser, resetPassword } from "../services/authServices";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import logo from '../assets/expenseLogo.png';
@@ -44,7 +44,7 @@ export default function LogIn() {
     setResetLoading(true);
     try {
       // Call your reset password API
-      await resetPasswordAPI({ email, newPassword: newPass });
+      await resetPassword({ email, newPassword: newPass });
       alert("Password reset successful. You can now login.");
       setIsForgotPass(false);
       setNewPass("");
