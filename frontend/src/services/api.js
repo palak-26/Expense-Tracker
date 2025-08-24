@@ -24,7 +24,7 @@ API.interceptors.response.use(
     if (error.response) {
       if (error.response.status === 401) {
         localStorage.removeItem("token");
-        window.location.href = "/login"; // redirect to login
+        window.location.href = "/auth/login"; // redirect to login
       }
       console.error("Backend error:", error.response.data);
     } else if (error.request) {
