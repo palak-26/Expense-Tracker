@@ -92,7 +92,7 @@ export default function LogIn() {
         {/* Register Link */}
         <p className="text-sm text-center">
           No account?{" "}
-          <Link to="/auth/register" className="underline text-violet-700 hover:text-violet-900">
+          <Link to="/api/auth/register" className="underline text-violet-700 hover:text-violet-900">
             Register
           </Link>
         </p>

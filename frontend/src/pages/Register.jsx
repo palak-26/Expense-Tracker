@@ -75,7 +75,7 @@ export default function Register() {
         </button>
         <p className="text-sm text-center">
           Already have an account?{" "}
-          <Link to="/auth/login" className="underline  text-violet-700 hover:text-violet-900">
+          <Link to="/api/auth/login" className="underline  text-violet-700 hover:text-violet-900">
             Login
           </Link>
         </p>
