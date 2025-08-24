@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { formatDate } from "../utils/formatDate";
 import { deleteExpense, updateExpense } from "../services/expenseServices";
+import { useNavigate } from "react-router-dom";
 
 export default function ExpenseList({ expenses = [] }) {
   // ---------------- Filters ----------------
@@ -14,6 +15,7 @@ export default function ExpenseList({ expenses = [] }) {
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState("");
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const DEFAULT_CATEGORIES = [
     "Food",
@@ -138,7 +140,11 @@ export default function ExpenseList({ expenses = [] }) {
                     <td className="px-4 py-2 text-center flex justify-center gap-2">
                       <button
                         className="bg-violet-950 text-white px-3 py-1 rounded hover:opacity-95 transition"
-                        onClick={() => handleEditClick(expense)}
+                        onClick={() => {
+                          handleEditClick(expense)
+                          navigate('/user/dashboard')
+                        }
+                        }
                       >
                         Edit
                       </button>
@@ -182,7 +188,10 @@ export default function ExpenseList({ expenses = [] }) {
                 <div className="flex gap-2 mt-3">
                   <button
                     className="bg-violet-950 text-white px-3 py-1 rounded hover:opacity-95 transition"
-                    onClick={() => handleEditClick(expense)}
+                    onClick={() => {
+                      handleEditClick(expense)
+                      navigate('/user/dashboard')
+                    }}
                   >
                     Edit
                   </button>
