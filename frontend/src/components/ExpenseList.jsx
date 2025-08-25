@@ -190,7 +190,7 @@ export default function ExpenseList({ expenses = [] }) {
                     className="bg-violet-950 text-white px-3 py-1 rounded hover:opacity-95 transition"
                     onClick={() => {
                       handleEditClick(expense)
-                      navigate('/user/dashboard')
+                    
                     }}
                   >
                     Edit
