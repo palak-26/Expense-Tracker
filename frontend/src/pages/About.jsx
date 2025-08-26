@@ -15,14 +15,13 @@ const About = () => {
       title: 'Welcome',
       content:
         'Welcome to Expense Tracker, your personal finance companion designed to help you take control of your spending, manage your budget, and achieve your financial goals effortlessly.',
-      gradient: 'from-blue-400 via-blue-300 to-blue-200'
     },
     {
       icon: <img src={mission} alt="" className="h-10 w-10 relative bottom-1" />,
       title: 'Our Mission',
       content:
         'Our mission is simple: empower individuals to make smarter financial decisions. Whether you’re a student, professional, or small business owner, Expense Tracker provides an intuitive platform to track your income and expenses in real-time.',
-      gradient: 'from-purple-400 via-expense-violet to-expense-purpleLight'
+      
     },
     {
       icon: <img src={features} alt="" className="h-10 w-10 relative bottom-1" />,
@@ -36,21 +35,21 @@ const About = () => {
           <li><b>Responsive Design:</b> Use Expense Tracker on any device — mobile, tablet, or desktop.</li>
         </ul>
       ),
-      gradient: 'from-green-400 via-green-300 to-green-200'
+      
     },
     {
       icon: <img src={why} alt="" className="h-10 w-10 relative bottom-1" />,
       title: 'Why Choose Expense Tracker?',
       content:
         'Managing money can be stressful, but Expense Tracker makes it simple, fast, and enjoyable. With insightful reports and intuitive tools, you can identify spending patterns, cut unnecessary expenses, and save more for the future.',
-      gradient: 'from-pink-400 via-pink-300 to-pink-200'
+     
     },
     {
       icon: <img src={vision} alt="" className="h-10 w-10 relative bottom-1" />,
       title: 'Our Vision',
       content:
         'We envision a world where everyone has financial clarity and confidence. Expense Tracker is built to guide you every step of the way toward smarter money management.',
-      gradient: 'from-yellow-300 via-yellow-200 to-yellow-100'
+      
     }
   ];
 
@@ -58,7 +57,7 @@ const About = () => {
     <div>
       <div>
         <NavBar />
-        <div className="w-screen min-h-screen bg-gradient-to-r from-expense-purpleLight via-purple-200 to-blue-200 animate-gradient-x p-6 flex flex-col items-center">
+        <div className="w-screen min-h-screen bg-gradient-to-b from-expense-purpleLight via-purple-200 to-expense-purpleLight  p-6 flex flex-col items-center">
         
         <div>
           <h1 className="text-4xl sm:text-5xl font-bold mt-28 mb-12 text-center">
@@ -73,7 +72,6 @@ const About = () => {
               title={card.title}
               content={card.content}
               icon={card.icon}
-              gradient={card.gradient}
             />
           ))}
         </div>

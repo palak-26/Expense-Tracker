@@ -29,7 +29,7 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-[calc(100vh-56px)] grid place-items-center p-4 bg-expense-lightPink">
+    <div className="min-h-screen grid place-items-center p-4 bg-gradient-to-b from-expense-purpleLight via-purple-200 to-expense-purpleLight">
       <form onSubmit={submit} className="w-full max-w-sm bg-white p-6 rounded-2xl shadow space-y-3 flex flex-col items-center">
          {/* Logo */}
         <img src={logo} alt="" className="h-20 w-20 " />

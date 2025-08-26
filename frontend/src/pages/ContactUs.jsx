@@ -9,12 +9,12 @@ const ContactUs = () => {
   return (
     <div>
       <NavBar />
-      <div className="w-screen min-h-screen bg-gradient-to-br from-purple-100 via-purple-200 to-purple-300 p-6 flex justify-center items-center">
+      <div className="w-screen min-h-screen bg-gradient-to-b from-expense-purpleLight via-purple-200 to-expense-purpleLight p-6 flex justify-center items-center">
         {/* Main container - responsive grid */}
-        <div className="max-w-6xl w-full md:mt-24 bg-white rounded-2xl shadow-xl p-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="max-w-6xl w-full md:mt-24 bg-violet-100 rounded-2xl shadow-xl p-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Form Section */}
           <div>
-            <h2 className="text-3xl font-bold mb-6 text-purple-900">Contact Us</h2>
+            <h2 className="text-3xl font-bold mb-6 text-violet-950">Contact Us</h2>
 
             {/* Formspree form */}
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -72,7 +72,7 @@ const ContactUs = () => {
               <button
                 type="submit"
                 disabled={state.submitting}
-                className="bg-purple-700 text-white px-6 py-3 rounded-lg hover:bg-purple-800 transition duration-300 w-full flex items-center justify-center"
+                className="bg-violet-950 text-white px-6 py-3 rounded-lg hover:bg-violet-950/95 transition duration-300 w-full flex items-center justify-center"
               >
                 {state.submitting ? (
                   <>
@@ -112,7 +112,7 @@ const ContactUs = () => {
 
           {/* Contact Information Section */}
           <div className="bg-purple-50 p-6 rounded-2xl flex flex-col justify-center">
-            <h3 className="text-2xl font-semibold text-purple-900 mb-4">Get in Touch</h3>
+            <h3 className="text-2xl font-semibold text-violet-950 mb-4">Get in Touch</h3>
             <p className="text-gray-700 mb-6">
               We'd love to hear from you! Whether you have a question about features, pricing, or anything else, our team is ready to answer all your questions.
             </p>
@@ -120,7 +120,7 @@ const ContactUs = () => {
             <div className="space-y-4 text-gray-800">
               <div className="flex items-start">
                 <div className="bg-purple-100 p-2 rounded-full mr-3 flex-shrink-0">
-                  <svg className="w-5 h-5 text-purple-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-violet-950" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path>
                   </svg>
                 </div>
@@ -131,7 +131,7 @@ const ContactUs = () => {
               
               <div className="flex items-start">
                 <div className="bg-purple-100 p-2 rounded-full mr-3 flex-shrink-0">
-                  <svg className="w-5 h-5 text-purple-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-violet-950" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
                   </svg>
                 </div>
@@ -142,7 +142,7 @@ const ContactUs = () => {
               
               <div className="flex items-start">
                 <div className="bg-purple-100 p-2 rounded-full mr-3 flex-shrink-0">
-                  <svg className="w-5 h-5 text-purple-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-violet-950" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                   </svg>
@@ -154,7 +154,7 @@ const ContactUs = () => {
             </div>
             
             <div className="mt-8 pt-6 border-t border-purple-100">
-              <h4 className="text-lg font-semibold text-purple-900 mb-3">Business Hours</h4>
+              <h4 className="text-lg font-semibold text-violet-950 mb-3">Business Hours</h4>
               <div className="text-gray-700 space-y-1">
                 <div className="flex justify-between">
                   <span>Monday - Friday:</span>

@@ -6,21 +6,22 @@ import Home from "./pages/Home";
 import { PrivateRoute, useAuth } from "./context/AuthContext";
 import About from "./pages/About";
 import ContactUs from "./pages/ContactUs";
-import { FormspreeProvider } from "@formspree/react";
+
+
 
 function AppRoutes() {
   const auth = useAuth();
   const token = auth?.token; // ✅ Safe access
-
+  const user = auth?.user;
+  
   return (
-    // <FormspreeProvider project="mjkonjdy">
       <Routes>
       {/* Landing page */}
       <Route path="/" element={<Home />} />
 
       {/* Dashboard - protected route */}
       <Route
-        path="/user/dashboard"
+        path="/users/:name/dashboard"
         element={
             <PrivateRoute>
               <Dashboard />
@@ -31,11 +32,11 @@ function AppRoutes() {
       {/* Auth routes */}
       <Route
         path="/auth/login"
-        element={token ? <Navigate to="/user/dashboard" replace /> : <Login />}
+        element={token ? <Navigate to={`/users/${user.name}/dashboard`} replace /> : <Login />}
       />
       <Route
         path="/auth/register"
-        element={token ? <Navigate to="/user/dashboard" replace /> : <Register />}
+        element={token ? <Navigate to={`/users/${user.name}/dashboard`} replace /> : <Register />}
       />
 
       {/* Catch-all */}
@@ -47,7 +48,6 @@ function AppRoutes() {
       
 
     </Routes>
-    // </FormspreeProvider>
   );
 }
 

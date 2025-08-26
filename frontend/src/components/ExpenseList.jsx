@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { formatDate } from "../utils/formatDate";
 import { deleteExpense, updateExpense } from "../services/expenseServices";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 export default function ExpenseList({ expenses = [] }) {
   // ---------------- Filters ----------------
@@ -16,6 +17,8 @@ export default function ExpenseList({ expenses = [] }) {
   const [date, setDate] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const auth = useAuth();
+  const user= auth?.user;
 
   const DEFAULT_CATEGORIES = [
     "Food",
@@ -140,10 +143,8 @@ export default function ExpenseList({ expenses = [] }) {
                     <td className="px-4 py-2 text-center flex justify-center gap-2">
                       <button
                         className="bg-violet-950 text-white px-3 py-1 rounded hover:opacity-95 transition"
-                        onClick={() => {
+                        onClick={() => 
                           handleEditClick(expense)
-                          navigate('/user/dashboard')
-                        }
                         }
                       >
                         Edit
@@ -188,10 +189,9 @@ export default function ExpenseList({ expenses = [] }) {
                 <div className="flex gap-2 mt-3">
                   <button
                     className="bg-violet-950 text-white px-3 py-1 rounded hover:opacity-95 transition"
-                    onClick={() => {
+                    onClick={() => 
                       handleEditClick(expense)
-                    
-                    }}
+                    }
                   >
                     Edit
                   </button>
@@ -213,9 +213,17 @@ export default function ExpenseList({ expenses = [] }) {
 
       {/* ================= Modal for Editing ================= */}
       {editingExpense && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-2xl shadow-xl w-full max-w-lg">
-            <h2 className="text-lg font-bold mb-4">Edit Expense</h2>
+        <div className="fixed inset-0  bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="bg-white space-y-4 p-6 rounded-2xl shadow-xl w-full max-w-lg">
+            <div className="flex justify-between items-center">
+              <h1 className="text-lg font-bold">Edit Expense</h1>
+              <span
+                className="cursor-pointer text-gray-500 hover:text-gray-800 text-xl font-bold"
+                onClick={() => setEditingExpense(false)}
+              >
+                ×
+            </span>
+            </div>
             <form onSubmit={handleUpdate} className="grid grid-cols-1 gap-3">
               <input
                 type="text"
@@ -260,6 +268,7 @@ export default function ExpenseList({ expenses = [] }) {
                 <button
                   type="submit"
                   disabled={loading}
+                  onClick={`/users/${user.name}/dashboard`}
                   className="bg-violet-950 font-semibold flex items-center justify-center text-white rounded px-4 py-2 hover:opacity-90 disabled:opacity-50"
                 >
                   {loading ? (

@@ -20,11 +20,11 @@ const Card = ({
     <motion.div
       className={`w-full sm:w-[80%]  
                   bg-gradient-to-tr flex flex-col items-center justify-center 
-                  ${gradient} rounded-3xl shadow-md p-6 sm:p-8 
+                  rounded-3xl shadow-md p-6 sm:p-8 
                   hover:scale-105 transition-transform duration-300`}
       initial={{ opacity: 0, y: 20 }} // Start faded + slightly lower
       whileInView={{ opacity: 1, y: 0 }} // Animate in when visible
-      viewport={{ once: true }} // Only animate first time it appears
+      viewport={{ once: false }} // Only animate first time it appears
       transition={{ duration: 0.4 }}
     >
       {/* Title with Icon */}

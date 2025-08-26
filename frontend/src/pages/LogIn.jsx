@@ -38,6 +38,7 @@ export default function LogIn() {
   const handleResetPassword = async (e) => {
     e.preventDefault();
     if (newPass !== confirmPass) {
+      
       alert("Passwords do not match!");
       return;
     }
@@ -57,7 +58,7 @@ export default function LogIn() {
   };
 
   return (
-    <div className="min-h-[calc(100vh-56px)] grid place-items-center p-4 bg-expense-lightPink">
+    <div className="min-h-screen grid place-items-center p-4 bg-gradient-to-b from-expense-purpleLight via-purple-200 to-expense-purpleLight">
       {/* Login Form */}
       <form
         onSubmit={handleLogin}

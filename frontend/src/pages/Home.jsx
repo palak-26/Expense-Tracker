@@ -4,21 +4,21 @@ import expenseLogo from '../assets/expenseLogo.png';
 import spending from '../assets/spending.png';
 import NavBar from '../components/NavBar';
 import { useNavigate } from 'react-router-dom';
-import Footer from '../components/Footer';
+
 
 const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative w-screen min-h-screen space-y-6 bg-expense-lightPink overflow-hidden">
+    <div className="relative w-screen min-h-screen space-y-6 bg-gradient-to-b from-expense-purpleLight via-purple-200 to-expense-purpleLight  overflow-hidden">
       {/* Navbar */}
       <NavBar />
 
       {/* Hero Section */}
-      <div className="relative flex flex-col mt-20 lg:flex-row items-center justify-evenly p-8 lg:p-10 mt-10 lg:mt-20 z-20">
+      <div className="relative flex flex-col  lg:flex-row items-center justify-evenly p-8 lg:p-10 lg:mt-20 z-20">
         
         {/* Left text content */}
-        <div className="flex flex-col justify-center items-center lg:items-start  lg:text-left gap-4 max-w-lg">
+        <div className="flex flex-col mt-20 justify-center items-center lg:items-start  lg:text-left gap-4 max-w-lg">
           <img src={expenseLogo} alt="Expense Logo" className="h-16 w-16 md:h-20 md:w-20" />
           <h1 className="text-4xl lg:text-7xl font-bold text-center md:text-start leading-tight">Expense Tracker</h1>
           <p className="text-lg md:text-3xl font-semibold text-center md:text-start text-violet-950">
@@ -26,7 +26,7 @@ const Home = () => {
           </p>
           <button
             onClick={() => navigate("/auth/login")}
-            className="bg-violet-950 text-white font-semibold py-3 px-8 rounded-md text-lg md:text-xl shadow-md hover:scale-105 transition-transform"
+            className="bg-violet-950 text-white font-semibold py-3 px-6 rounded-md text-base shadow-md hover:scale-105 transition-transform"
           >
             Get Started
           </button>
@@ -95,9 +95,11 @@ const Home = () => {
       >
         <defs>
           <linearGradient id="lightWaveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#A78BFA" />
-            <stop offset="100%" stopColor="#A78BFA" />
+            <stop offset="0%" stop-color="#6b2fa1" /> 
+            <stop offset="50%" stop-color="#7c3aed" /> 
+            <stop offset="100%" stop-color="#3c096c" /> 
           </linearGradient>
+
         </defs>
         <path
           d="M600 200L600 80C550 60 500 40 440 60C390 80 350 110 300 110C250 110 200 80 150 80C100 80 50 100 0 120L0 200Z"
@@ -107,7 +109,20 @@ const Home = () => {
 
       
       
-      <svg className=" hidden md:block absolute bottom-0 right-0 w-full h-[35%] z-30 scale-x-[1]" viewBox="0 0 600 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" > <defs> <linearGradient id="darkWaveGradient" x1="0%" y1="0%" x2="0%" y2="100%"> <stop offset="0%" stopColor="#8B5CF6" /> <stop offset="100%" stopColor="#8B5CF6" /> </linearGradient> </defs> <path d="M600 200V120C550 100 500 80 440 100C390 120 350 150 300 150C250 150 200 120 150 120C100 120 50 140 0 160V200Z" fill="url(#darkWaveGradient)" /> </svg>
+      <svg 
+      className=" hidden md:block absolute bottom-0 right-0 w-full h-[35%] z-30 scale-x-[1]" 
+      viewBox="0 0 600 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" > 
+        <defs> 
+          <linearGradient id="lightWaveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#6b2fa1" /> 
+            <stop offset="50%" stop-color="#7c3aed" /> 
+            <stop offset="100%" stop-color="#3c096c" /> 
+          </linearGradient>
+        </defs> 
+        <path 
+        d="M600 200V120C550 100 500 80 440 100C390 120 350 150 300 150C250 150 200 120 150 120C100 120 50 140 0 160V200Z" 
+        fill="url(#lightWaveGradient)" /> 
+      </svg>
       
     </div>
   );
