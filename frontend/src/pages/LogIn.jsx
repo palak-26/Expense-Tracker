@@ -39,7 +39,7 @@ export default function LogIn() {
     e.preventDefault();
     if (newPass !== confirmPass) {
       
-      alert("Passwords do not match!");
+      alert("Passwords do not match");
       return;
     }
     setResetLoading(true);
