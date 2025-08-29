@@ -76,9 +76,9 @@ const NavBar = () => {
           className="sm:hidden flex flex-col gap-1 focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <span className="block w-6 h-0.5 bg-black "></span>
-          <span className="block w-6 h-0.5 bg-black "></span>
-          <span className="block w-6 h-0.5 bg-black "></span>
+          <span className="block w-6 h-0.5 bg-white "></span>
+          <span className="block w-6 h-0.5 bg-white "></span>
+          <span className="block w-6 h-0.5 bg-white "></span>
         </button>
       </div>
 
