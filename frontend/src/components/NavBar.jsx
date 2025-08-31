@@ -72,14 +72,30 @@ const NavBar = () => {
         </div>
 
         {/* Mobile Hamburger Menu Button */}
-        <button
+        
+          {isMenuOpen? 
+          <>
+          <button
+          className="sm:hidden cursor-pointer text-white  text-xl font-bold"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          × 
+        </button>
+          </> : 
+          <>
+          <button
           className="sm:hidden flex flex-col gap-1 focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <span className="block w-6 h-0.5 bg-white "></span>
           <span className="block w-6 h-0.5 bg-white "></span>
           <span className="block w-6 h-0.5 bg-white "></span>
-        </button>
+          </button>
+          </> 
+          
+          }
+
+        
       </div>
 
       {/* Mobile Menu Dropdown */}
@@ -95,7 +111,7 @@ const NavBar = () => {
                 {item}
               </li>
             ))}
-            <li>
+            <li className="flex flex-col gap-y-2">
               <button
                 className="font-semibold text-base text-violet-950 bg-white border border-[#6744ce]  px-4 py-2 rounded-md "
                 onClick={() => {
