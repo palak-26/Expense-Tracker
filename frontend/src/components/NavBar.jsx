@@ -98,7 +98,7 @@ const NavBar = () => {
         
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu  */}
       {isMenuOpen && (
         <div className="sm:hidden fixed top-20 left-0 w-full bg-white shadow-lg z-40">
           <ul className="flex flex-col items-center gap-4 py-4">
